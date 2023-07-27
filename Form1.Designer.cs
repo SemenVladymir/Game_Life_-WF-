@@ -65,9 +65,10 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(6, 45);
             label1.Name = "label1";
-            label1.Size = new Size(48, 20);
+            label1.Size = new Size(47, 20);
             label1.TabIndex = 2;
             label1.Text = "Delay";
             // 
@@ -93,9 +94,10 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(129, 48);
             label2.Name = "label2";
-            label2.Size = new Size(31, 20);
+            label2.Size = new Size(30, 20);
             label2.TabIndex = 5;
             label2.Text = "mS";
             // 
@@ -124,19 +126,22 @@
             // AutoFill
             // 
             AutoFill.AutoSize = true;
+            AutoFill.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             AutoFill.Location = new Point(13, 129);
             AutoFill.Name = "AutoFill";
-            AutoFill.Size = new Size(88, 24);
+            AutoFill.Size = new Size(84, 24);
             AutoFill.TabIndex = 9;
             AutoFill.Text = "Auto fill";
             AutoFill.UseVisualStyleBackColor = true;
+            AutoFill.CheckedChanged += AutoFill_CheckedChanged;
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label4.Location = new Point(103, 175);
             label4.Name = "label4";
-            label4.Size = new Size(22, 20);
+            label4.Size = new Size(21, 20);
             label4.TabIndex = 12;
             label4.Text = "%";
             // 
@@ -151,9 +156,10 @@
             // label5
             // 
             label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             label5.Location = new Point(13, 175);
             label5.Name = "label5";
-            label5.Size = new Size(29, 20);
+            label5.Size = new Size(28, 20);
             label5.TabIndex = 10;
             label5.Text = "Fill";
             // 
@@ -173,7 +179,7 @@
             groupBox1.Size = new Size(176, 240);
             groupBox1.TabIndex = 13;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Setup";
+            groupBox1.Text = "Settings";
             // 
             // Form1
             // 

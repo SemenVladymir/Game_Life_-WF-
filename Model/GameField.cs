@@ -174,11 +174,8 @@ namespace Game_Life__WF_.Model
                 for (int j = 0; j < Columns; j++)
                 {
                     tmp = random.Next(100);
-                    if (tmp <= percentFill)
-                    {
-                        Field[i, j].Alive = true;
-                        Field[i,j].Btn.BackColor = Color.Black;
-                    }
+                    if (tmp >= percentFill)
+                        Field[i, j].SetLifeState(true, 0);
                 }
             }
         }

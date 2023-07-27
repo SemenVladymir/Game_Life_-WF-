@@ -10,16 +10,19 @@ namespace Game_Life__WF_
     {
         public GameField MyGameField;
         public int squareSize = 20;
-        public bool stop = false;
+        private bool stop = false;
         private int gen = 0;
         Timer _timer = new Timer();
         private bool autoFill = false;
         private int percentFill = 40;
+
+
         public Form1()
         {
             InitializeComponent();
             _timer.Interval = 100;
             _timer.Tick += OnTimerTick;
+            Fill.Enabled = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -79,7 +82,7 @@ namespace Game_Life__WF_
                 }
                 else
                 {
-                    MessageBox.Show("Evolution stoped! You can add some food to the game field for evolution continue.");
+                    MessageBox.Show("Evolution stoped! You can add some food to the game-field for evolution continue.");
                     stop = true;
                 }
             }
@@ -94,7 +97,7 @@ namespace Game_Life__WF_
         private void Delay_KeyPress(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
-            if (!Char.IsDigit(number))
+            if (!Char.IsDigit(number) && number != 8)
             {
                 e.Handled = true;
             }
@@ -103,10 +106,20 @@ namespace Game_Life__WF_
         private void Fill_KeyPress(object sender, KeyPressEventArgs e)
         {
             char number = e.KeyChar;
-            if (!Char.IsDigit(number))
+            if (!Char.IsDigit(number) && number != 8)
             {
                 e.Handled = true;
             }
+        }
+
+        private void AutoFill_CheckedChanged(object sender, EventArgs e)
+        {
+            if (AutoFill.Checked == true)
+            {
+                Fill.Enabled = true;
+            }
+            else
+                Fill.Enabled = false;
         }
     }
 }
